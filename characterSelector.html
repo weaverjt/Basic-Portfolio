@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Character Selector</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Links html to my css style holder, someDunkus.min.css...and I might have added bootstrap functionality by adding "min" ?? -->
+    <link rel="stylesheet" href="assets/css/someDonkus.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+        
+
+</head>
+
+<body>
+    <script src="character-selector.js"></script>
+<nav class="navbar navbar-right" role="navigation">
+        <div class="container-fluid">
+            <div class="row" id="row0">
+            <ul class="nav navbar-header">
+                <li class="dropdown">
+                    
+                    
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="yes">
+                        Some stuff...
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                       
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="someDonkusindex.html">The Legend...</a>
+                        </li>
+                       
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="someDonkuscontact.html">Contant...</a>
+                        </li>
+
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="someDonkusportfolio.html">Portfolio...</a>
+                        </li>
+
+                        <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="">Some Donkus Character Selector</a>
+                            </li>
+
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="http://adventuretime.wikia.com/wiki/Clarence">About Some Donkus...</a>
+                        </li>
+
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="https://www.youtube.com/watch?v=tj_ui0TtYoA">Take a Break...</a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <p>
+        The Adventure Time Character Selector!!<br>
+        Follow the prompts by answering "yes" or "no" 
+        to find out which character you are!!!<br>
+    </p>
+    
+    <button onclick="promptUser()">Ready? Start!</button>
+    
+    <p id="demo"></p>
+
+
+<script>
+
+function promptUser() {
+
+var prompt1 = prompt("Are you brave in the face of certain death at the hands of the Lich?");    
+/*TRUNK-yes: IS THE START OF THE PROMPT[1]-IS-yes DAISY CHAIN */
+    //trunk
+if (prompt1 == "yes") {
+    var prompt2 = prompt("You wouldn't happen to be made of gum, would you?");                  
+                    //branch
+                        if (prompt2 == "yes") {
+                            var prompt3= prompt("Oh! Are you quite the smart cookie?");        
+                                                //switch
+                                                    if (prompt3 == "yes") {
+                                                    var prompt4 = prompt("A cookie? I thought you said you were made of gum?");            
+                                                                                //twig
+                                                                                if(prompt4 == "yes") {
+                                                                                    var prompt5 = prompt("Oh I see my mistake now, you must be Bonnibel!");               
+                                                                                                         //stick
+                                                                                                            if (prompt5 == "yes") {
+
+                                                                                                                document.getElementById("demo").innerHTML =    
+                                                                                                                "Ah ha! It is a pleasure to meet you, your majesty!"  
+                                                                                                                /*Print bubblegum pic
+                                                                                                                */
+                                                                                                            }
+
+                                                                                                            else if (prompt5 == "no") {
+                                                                                                                document.getElementById("demo").innerHTML =     
+                                                                                                                "Oh then you are Uncle Gumbald, you scowndral"
+                                                                                                              /*  *print gumbald picture* */
+                                                                                                            
+
+                                                                                                            }
+                                                                                                                    
+                                                                                }
+
+                                                                                    //twig
+                                                                                else if (prompt4 == "no"){
+                                                                                var prompt6 = prompt("You liar! Are you trying to decieve me?!");
+                                                                                                            if(prompt6 == "yes") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                                "Of course, you would be...I know who you are! Peppermint Butler!"
+                                                                                                               /* *Print picure of a liar...Peppermint butler?*
+                                                                                                                */
+                                                                                                                }
+
+                                                                                    
+
+                                                                                                            else if(prompt6 == "no") {
+                                                                                                            document.getElementById("demo").innerHTML =  
+                                                                                                            "No, you can't fool me anymore! You're the Lich!"
+                                                                                                         /*  
+                                                                                                            *Print lich* */
+                                                                                                                }// 
+                                                                                             }//
+                                                     }//
+
+                        /*SWITCH SPLIT---------------------------*/
+                                                    
+                                                      //switch
+                                                    else if (prompt3 == "no") {
+                                                    var prompt7 = prompt("That..is interesting indeed. Tell me, would you say your form is abnormal?");            //twig
+                                                                                if(prompt7 == "yes") {
+                                                                                var prompt8 = prompt("Hmmmm...could you be...are you a gigantic gum dragon?");                //stick
+                                                                                                            if(prompt8 == "yes") {
+                                                                                                                document.getElementById("demo").innerHTML = 
+                                                                                                                    "Netty, what are you doing outside the castle?"
+                                                                                                                
+                                                                                                                /* picture of netty
+                                                                                                                    */
+
+                                                                                                            }
+
+                                                                                                            else if (prompt8 == "no") {
+                                                                                                                document.getElementById("demo").innerHTML = "You must be Cousin Chicle..."
+                                                                                                                /*end code here  */
+
+                                                                                                            }
+                                                                                                                    
+                                                                                }
+
+                                                                                    //twig
+                                                                                else if (prompt7 == "no"){
+                                                                                var prompt9 = prompt("Are you known to bake?");
+                                                                                                            if(prompt9 == "yes") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                            
+                                                                                                            "You're Aunt Lolly!"
+                                                                                                            
+
+                                                                                                                }
+
+                                                                                                            else if(prompt9 == "no") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                            "You have to be the gummy fish then!"
+                                                                                                            
+                                                                                                                
+                                                                                                            }// 
+                                                                                }//
+                                                     }//
+
+                            } //prompt[2]-yes end...
+
+                            /*BRANCH SPLIT----------------------------------*/
+
+                            // branch
+                            else if (prompt2 == "no") {
+                                var prompt10 = prompt("No, of course not...hmmm are you immortal?");
+                                                     //switch
+                                                    if (prompt10 == "yes") {
+                                                        var prompt11 = prompt("Ahhh now we're getting somewhere! Are you a at all demonic?");      
+                                                                                //twig
+                                                                                if(prompt11 == "yes") {
+                                                                                    var prompt12 = prompt("Wait, are you a full demon?");       
+                                                                                                            //stick
+                                                                                                            if(prompt12 == "yes") {
+
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                                "YOU'RE THE WICKED CREATURE ABADEER!"
+                                                                                                                
+
+                                                                                                            }
+
+                                                                                                            else if (prompt12 == "no") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                                
+                                                                                                                "You're Marceline the vampire quuen!"
+                                                                                                                
+
+                                                                                                            }
+                                                                                                                    
+                                                                                }
+                                                                                    //twig
+                                                                                else if (prompt11 == "no"){
+                                                                                    var prompt13 = prompt("Hmmm is the source of your immortality magical");
+                                                                                                            if(propmpt13 == "yes") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                            "You're Ice King!"
+                                                                                                            
+                                                                                                            }
+
+                                                                                    
+
+                                                                                                            else if(prompt13 =="no") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                            
+                                                                                                            "You're Finns Mom!"
+                                                                                                            
+                                                                                                            }// 
+                                                                                }//
+                                                    }//
+                                                    else if (prompt10 == "no") {
+                                                        var prompt14 = prompt("Are you good in a fight?");      
+                                                                                //twig
+                                                                                if(prompt14 == "yes") {
+                                                                                    var prompt15 = prompt("Do you use a sword?");       
+                                                                                                            //stick
+                                                                                                            if(prompt15 == "yes") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                                    
+                                                                                                                    "You're Finn!"
+                                                                                                                    
+
+                                                                                                            }
+
+                                                                                                            else if (prompt15 == "no") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                                
+                                                                                                                "You're Jake!"
+                                                                                                                
+
+                                                                                                            }
+                                                                                                                    
+                                                                                }
+                                                                                    //twig
+                                                                                else if (prompt14 == "no"){
+                                                                                    var prompt16 = prompt("Are you a worm?");
+                                                                                                            if(prompt16 == "yes") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                            "You're Shelby!"
+                                                                                                            
+                                                                                                            
+                                                                                                            }
+
+                                                                                    
+
+                                                                                                            else if(prompt16 =="no") {
+                                                                                                                document.getElementById("demo").innerHTML =
+                                                                                                            "You're the Goose! Boobafina!"
+                                                                                                            
+                                                                                                            }// 
+                                                                                }//
+
+                                                        }//
+
+                                }//
+
+                        }//prompt1-yes
+
+//FIRST DIVERGENCE---------------------------------------------------------------//
+
+
+/*TRUNK-no: IS THE START OF THE PROMPT[1]-IS-no DAISY CHAIN*/
+
+else if (prompt1 == "no") {
+    var prompt17 = prompt("");                  //branch
+                        if (prompt17 == "yes") {
+                            var prompt18 = prompt("");        //switch
+                                                    if (prompt18 == "yes") {
+                                                    var prompt19 = prompt("");            //twig
+                                                                                if(prompt19 == "yes") {
+                                                                                    var prompt20 = prompt("");                //stick
+                                                                                                            if(prompt20 == "yes") {
+
+                                                                                                                
+                                                                                                            }
+
+                                                                                                            else if (prompt20 == "no") {
+
+                                                                                                              
+
+                                                                                                            }
+                                                                                                                    
+                                                                                }
+
+                                                                                    //twig
+                                                                                else if (prompt19 == "no"){
+                                                                                var prompt21 = prompt("");
+                                                                                                            if(prompt21 == "yes") {
+                                                                                                               
+                                                                                                            }
+                                                                                                   
+                                                                                                            else if(prompt21 == "no") {
+
+                                                                                                           
+                                                                                                                }// 
+                                                                                             }//
+                                                     }//
+
+                        /*SWITCH SPLIT---------------------------*/
+                                                    
+                                                      //switch
+                                                    else if (prompt18 == "no") {
+                                                    var prompt22 = prompt("");            //twig
+                                                                                if(prompt22 == "yes") {
+                                                                                var prompt23 = prompt("");                //stick
+                                                                                                            if(prompt23 == "yes") {
+
+                                                                                                                    /*end code here*/
+
+                                                                                                            }
+
+                                                                                                            else if (prompt23 == "no") {
+
+                                                                                                                /*end code here*/
+
+                                                                                                            }
+                                                                                                                    
+                                                                                }
+
+                                                                                    //twig
+                                                                                else if (prompt22 == "no"){
+                                                                                var prompt24 = prompt("");
+                                                                                                            if(prompt24 == "yes") {
+                                                                                                            /*end code here*/
+
+                                                                                                                }
+
+                                                                                                            else if(prompt24 == "no") {
+
+                                                                                                          /*end code here*/
+                                                                                                                
+                                                                                                            }// 
+                                                                                }//
+                                                     }//
+
+                            } //prompt[2]-yes end...
+
+                            /*BRANCH SPLIT----------------------------------*/
+
+                            // branch
+                            else if (prompt17 == "no") {
+                                var prompt25 = prompt("");
+                                                     //switch
+                                                    if (prompt25 == "yes") {
+                                                        var prompt26 = prompt("");      
+                                                                                //twig
+                                                                                if(prompt26 == "yes") {
+                                                                                    var prompt27 = prompt("");       
+                                                                                                            //stick
+                                                                                                            if(prompt27 == "yes") {
+
+                                                                                                                    /*end code here*/
+
+                                                                                                            }
+
+                                                                                                            else if (prompt27 == "no") {
+
+                                                                                                                /*end code here*/
+
+                                                                                                            }
+                                                                                                                    
+                                                                                }
+                                                                                    //twig
+                                                                                else if (prompt26 == "no"){
+                                                                                    var prompt28 = prompt("");
+                                                                                                            if(prompt28 == "yes") {
+                                                                                                            /*end code here*/
+                                                                                                            
+                                                                                                            }
+
+                                                                                                            else if(prompt28 =="no") {
+
+                                                                                                            /*end code here*/
+                                                                                                            }// 
+                                                                                }//
+                                                    }//
+                                                    else if (prompt25 == "no") {
+                                                        var prompt29 = prompt("");      
+                                                                                //twig
+                                                                                if(prompt29 == "yes") {
+                                                                                    var prompt30 = prompt("");       
+                                                                                                            //stick
+                                                                                                            if(prompt30 == "yes") {
+
+                                                                                                                    /*end code here*/
+
+                                                                                                            }
+
+                                                                                                            else if (prompt30 == "no") {
+
+                                                                                                                /*end code here*/
+
+                                                                                                            }
+                                                                                                                    
+                                                                                }
+                                                                                    //twig
+                                                                                else if (prompt29 == "no"){
+                                                                                    var prompt31 = prompt("");
+                                                                                                            if(prompt31 == "yes") {
+                                                                                                            /*end code here*/
+                                                                                                            
+                                                                                                            }
+
+                                                                                    
+
+                                                                                                            else if(prompt31 =="no") {
+
+                                                                                                            /*end code here*/
+                                                                                                            }// 
+                                                                                }//
+
+                                                        }//
+
+                                }//
+
+}//prompt1-no end
+
+}//---function end
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
