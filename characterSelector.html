@@ -70,21 +70,39 @@
         </div>
     </nav>
 
+    <div class="container">
+        
+        <div class="row" id="title">
+            <div class="col-md-6">
+                <p id="characterSelector">
+                    The Adventure Time Character Selector!!<br>
+                    Follow the prompts by answering "yes" or "no" 
+                    to find out which character you are!!!<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="row" id="button">
+            <div class="col-md-6" id="colButton">
+                <button onclick="promptUser()">Ready? Start!</button>
+            </div>
+        </div>
 
 
-    <p id="characterSelector">
-        The Adventure Time Character Selector!!<br>
-        Follow the prompts by answering "yes" or "no" 
-        to find out which character you are!!!<br>
-    </p>
-    
-    <button onclick="promptUser()">Ready? Start!</button>
-    
-    <p id="endChain"></p>
+        <div class="row">
+                <div class="col-md-6">
+                    <p id="endChainPic"></p> 
+                </div>
+        </div>
 
-    <p id="endChainText"></p>
+            <div class="row">
+                <div class="col-md-6">
+            <p id="endChainPicText"></p>
+                </div>
+            </div>
 
-
+</div>
+<!--Unable to get Javascript to load externally-->
 <script>
 
 
@@ -109,11 +127,11 @@ if (prompt1 == "yes") {
                                                                                                         
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/7/70/S7e1_bonnie_bubblegum.png/revision/latest?cb=20151103191544";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                                                                                 "Ah ha! So you are, indeed, the fair Princess Bubblegum! It is a pleasure to meet you, your majesty!"
                                                                                                             ;
                                                                                                                 
@@ -122,11 +140,11 @@ if (prompt1 == "yes") {
                                                                                                             else if (prompt5 == "no") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://vignette.wikia.nocookie.net/villains/images/a/a1/Gumbald.png/revision/latest?cb=20180401174157";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                                                                                 "Oh...then you are Uncle Gumbald, you scowndral";
                                                                                                     
                                                                                                             }
@@ -139,11 +157,11 @@ if (prompt1 == "yes") {
                                                                                                             if(prompt6 == "yes") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/e/ed/S5e21_Peppermint_Butler_happy.png/revision/latest?cb=20140410233124";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                                                                        
                                                                                                                 "Oh ho! Of course, you would be...I know who you are! Peppermint Butler!"
                                                                                                                /* *Print picure of a liar...Peppermint butler?*
@@ -154,12 +172,12 @@ if (prompt1 == "yes") {
 
                                                                                                             else if(prompt6 == "no") {
                                                                                                                 var img = document.createElement("img");
-                                                                                                                img.src = "http://static.comicvine.com/uploads/scale_medium/13/131330/2732508-the_lich___with_background_by_destruccion_d51cut7.jpg";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.src = "http://static.comicvine.com/uploads/scale_medium/13/131330/2734008-the_lich___with_background_by_destruccion_d51cut7.jpg";
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML = 
+                                                                                                                document.getElementById("endChainPicText").innerHTML = 
                                                                                                             "No, you can't fool me anymore! You're the Lich!"
                                                                                                          
                                                                                                                 }// 
@@ -176,11 +194,11 @@ if (prompt1 == "yes") {
                                                                                                             if(prompt8 == "yes") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/5/5a/S7e1_neddy_pic.png/revision/latest?cb=20151106194950";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                                     "Netty, what are you doing outside the castle?"
                                                                                                                 
@@ -189,11 +207,11 @@ if (prompt1 == "yes") {
                                                                                                             else if (prompt8 == "no") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://78.media.tumblr.com/801854b6620938c55e6c42e6ffa661fd/tumblr_p14w5oG2vy1v6doabo2_1280.png";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                                  "You must be Cousin Chicle..."
                                                                                                                 
@@ -208,11 +226,11 @@ if (prompt1 == "yes") {
                                                                                                             if(prompt9 == "yes") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://78.media.tumblr.com/faebf896150d4f689d424812424e03a3/tumblr_p14w5oG2vy1v6doabo3_1280.png";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                             "You're Aunt Lolly!"
                                                                                                             
@@ -223,11 +241,11 @@ if (prompt1 == "yes") {
                                                                                                                 
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://i.ytimg.com/vi/gYI9TNNhD-o/maxresdefault.jpg";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                             "You...have to be the gummy fish then? I'm uncomfortable..."
                                                                                                               
@@ -252,11 +270,11 @@ if (prompt1 == "yes") {
                                                                                                             if(prompt12 == "yes") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/e/eb/S3e3_Yoman.png/revision/latest?cb=20131226195112";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                                 "YOU'RE THE WICKED CREATURE ABADEER!"
                                                                                                                 
@@ -267,11 +285,11 @@ if (prompt1 == "yes") {
                                                                                                                
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://cdn.shopify.com/s/files/1/0856/5322/products/Marceline1_fbe1ec39-fe22-4176-a85b-001c9f4f7d9d_1024x1024.jpg?v=1507906478";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                                 "You're Marceline the vampire quuen!"
                                                                                                                 
@@ -285,11 +303,11 @@ if (prompt1 == "yes") {
                                                                                                             if(propmpt13 == "yes") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/d/de/Ice_King_with_Snowball.png/revision/latest?cb=20130913025614";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                             "You're Ice King!"
                                                                                                             
@@ -300,11 +318,11 @@ if (prompt1 == "yes") {
                                                                                                             else if(prompt13 =="no") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://cdna.artstation.com/p/assets/images/images/008/744/494/large/karine-oliveira-my-beloved-mom-fixed.jpg?1515015280";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                             "You're Finns Mom!"
                                                                                                             
@@ -321,11 +339,11 @@ if (prompt1 == "yes") {
                                                                                                             
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/7/7a/S2e15_finn_excited.png/revision/latest?cb=20120509112257";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                                     "You're Finn!"
                                                                                                                     
@@ -335,11 +353,11 @@ if (prompt1 == "yes") {
                                                                                                             else if (prompt15 == "no") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "http://www.dvdtalk.com/reviews/images/reviews/1/full/1438259480_2.jpg";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                                 "You're Jake!"
                                                                                                                 
@@ -353,11 +371,11 @@ if (prompt1 == "yes") {
                                                                                                             if(prompt16 == "yes") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "https://pre00.deviantart.net/1af3/th/pre/f/2012/347/6/4/oh_shelby__by_owenneil-d5nvxzt.png";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                             "You're Shelby!"
                                                                                                             
@@ -369,11 +387,11 @@ if (prompt1 == "yes") {
                                                                                                             else if(prompt16 =="no") {
                                                                                                                 var img = document.createElement("img");
                                                                                                                 img.src = "http://portfolio.christieman.com/wp-content/uploads/2014/02/N-Neptr.png";
-                                                                                                                img.height = 250;
-                                                                                                                img.width = 250;
-                                                                                                                var src = document.getElementById("endChain");
+                                                                                                                img.height = 400;
+                                                                                                                img.width = 400;
+                                                                                                                var src = document.getElementById("endChainPic");
                                                                                                                 src.appendChild(img);
-                                                                                                                document.getElementById("endChainText").innerHTML =  
+                                                                                                                document.getElementById("endChainPicText").innerHTML =  
                                                     
                                                                                                             "You're Neptr!"
                                                                                                             
